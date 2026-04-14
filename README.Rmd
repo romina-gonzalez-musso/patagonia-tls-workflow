@@ -31,7 +31,7 @@ The pipeline integrates multiple processing steps—including tree segmentation,
 -   **Software documentation:** [Computree](https://computree.onf.fr/?page_id=42) - [SimpleForest](https://simpleforest.org/)
 -   **Script**:
     -   *1_COMPUTREE_SEGMENTATION_PIPELINE.xsct2*
--   **Script notes**: [See Supplementary Information](4_supplementary_notes/1_Computree_notes.html)
+-   **Script notes**: [See Supplementary Information](https://github.com/romina-gonzalez-musso/patagonia-tls-workflow/4_supplementary_notes/1_Computree_notes.md)
 
 #### **STEP 2**. Leaves-wood separation
 
@@ -47,7 +47,7 @@ The pipeline integrates multiple processing steps—including tree segmentation,
 -   **Software documentation:** [Computree](https://computree.onf.fr/?page_id=42) - [SimpleForest](https://simpleforest.org/)
 -   **Script**:
     -   *3_QSM_modeling_single_tree.xsct2*
--   **Script notes**: [See Supplementary Information](4_supplementary_notes/2_Computree_notes.html)
+-   **Script notes**: [See Supplementary Information](https://github.com/romina-gonzalez-musso/patagonia-tls-workflow/4_supplementary_notes/2_Computree_notes.md)
 
 #### **STEP 4**. Leaves/Crown voxelization
 
