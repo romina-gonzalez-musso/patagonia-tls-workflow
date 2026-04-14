@@ -1,0 +1,28 @@
+
+## Supplementary Information for Computree and Simpleforest pipeline
+
+### **TREE QSM MODELING PIPELINE** (Script 3)
+
+#### **Steps 22-32**: Qsm modeling
+
+| N | Step Name | Key Parameter | Value | Comments |
+|:--:|:--:|:--:|:--:|:--:|
+| 22 | Sphere Following | Pre-processing: Voxel size | 0.02 | Lower values may produce better results but require significantly more processing time. |
+|  |  | Pre-processing: Clustering range | 0.10–0.60 | Use higher values when some branches are disconnected from the main stem. |
+|  |  | Cloud-to-Model Distance: Method | MSAC Second Momentum | Use MSCAC First Momentum for lower-quality point clouds. |
+|  |  | Cloud-to-Model Distance: Crop distance | 0.030–0.070 | Increase if some branches appear disconnected from the main stem. |
+|  |  | Hyperparameters: Initialization height | 0.20–0.40 | Higher values are recommended if the base trunk is poorly defined. |
+| 23 | QSM Median Filter | Percentage | 0.15 |  |
+| 24 | QSM Detect Well-Fit Cylinders | Minimum Reverse Branch Order | 5 | Higher values remove smaller branches and tweaks. |
+|  |  | Percentage Fit Quality | 0.50 | Higher values retain more structures. |
+| 25 | Allometric Correction | Growth Parameter | Vessel Volume |  |
+|  |  | Correction Range | 1.1 | Higher values are less strict and less precise. |
+| 26 | QSM-Based Tree Clustering | n | 3 |  |
+| 27 | Sphere Following Advanced | Default values | Default values |  |
+| 28 | QSM Median Filter | Percentage | 0.15 |  |
+| 29 | QSM Correct Shoots | Correction Radius | 0.001–0.005–0.10 | Lower values increase the correction effect. |
+| 30 | QSM Detect Well-Fit Cylinders | Minimum Reverse Branch Order | 8 |  |
+|  |  | Percentage Fit Quality | 0.50 |  |
+| 31 | Allometric Correction | Growth Parameter | Vessel Volume |  |
+|  |  | Correction Range | 1.1 |  |
+| 32 | QSM List Exporter | – | – |  |

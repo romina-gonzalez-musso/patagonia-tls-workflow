@@ -1,3 +1,10 @@
+---
+always_allow_html: true
+output:
+  github_document
+---
+
+
 ## Supplementary Information for Computree and Simpleforest pipeline
 
 ### **TREE QSM MODELING PIPELINE** (Script 3)
