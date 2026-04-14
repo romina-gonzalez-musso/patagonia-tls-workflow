@@ -5,9 +5,9 @@ This repository provides a complete, reproducible workflow for
 estimating aboveground biomass (AGB) from terrestrial laser scanning
 (TLS) data using open-source tools.
 
-The pipeline integrates multiple processing steps—including tree
+The pipeline integrates multiple processing steps, including tree
 segmentation, leaf–wood classification, quantitative structure modeling
-(QSM), and voxel-based analysis—to estimate biomass across different
+(QSM), and voxel-based analysis, to estimate biomass across different
 forest compartments (stems, branches, foliage, and understory).
 
 ### **Reference and Citation**
@@ -18,13 +18,14 @@ forest compartments (stems, branches, foliage, and understory).
 
 - `1_sample_data/`: sample point cloud and a trained CANUPO classifier
 - `2_scripts/`: scripts to reproduce analysis
-- `3_results/`: example outputs (trees segmented, leaves-wood
-  classification, understory segmented, QSM tree sample)
+- `3_results/`: example outputs
 - `4_supplementary_notes/`: additional documentation and script notes
 
 ------------------------------------------------------------------------
 
 ### **Workflow description**
+
+<img src="_figures/Fig_workflow.png" alt="" width="75%" style="display: block; margin: auto auto auto 0;" />
 
 #### **STEP 1**. Point Cloud Segmentation in Computree and SimpleForest
 
@@ -33,7 +34,7 @@ forest compartments (stems, branches, foliage, and understory).
   [Computree](https://computree.onf.fr/?page_id=42) -
   [SimpleForest](https://simpleforest.org/)
 - **Script**:
-  - *1_COMPUTREE_SEGMENTATION_PIPELINE.xsct2*
+  - [*1_COMPUTREE_SEGMENTATION_PIPELINE.xsct2*](https://github.com/romina-gonzalez-musso/patagonia-tls-workflow/tree/main/2_scripts)
 - **Script notes**: [See Supplementary
   Information](https://github.com/romina-gonzalez-musso/patagonia-tls-workflow/blob/main/4_supplementary_notes/1_Computree_notes.md)
 
@@ -44,19 +45,19 @@ forest compartments (stems, branches, foliage, and understory).
   [CANUPO](https://www.cloudcompare.org/doc/wiki/index.php/CANUPO_(plugin)) -
   [CloudCompare](https://www.cloudcompare.org/)
 - **Script**:
-  - *2_Leaves_wood_sep_CC_CANUPO_R.R*
+  - [*2_Leaves_wood_sep_CC_CANUPO_R.R*](https://github.com/romina-gonzalez-musso/patagonia-tls-workflow/blob/main/2_scripts/2_Leaves_wood_sep_CC_CANUPO_R.R)
 - **Script notes**: manual inspection and editing in CloudCompare may be
   required to address potential classification errors and improve the
   quality of the resulting point clouds.
 
 #### **STEP 3**. Tree QSM modeling
 
-- **Software:** Computree (v5) and SimpleForest
+- **Software:** Computree (v5) + SimpleForest
 - **Software documentation:**
   [Computree](https://computree.onf.fr/?page_id=42) -
   [SimpleForest](https://simpleforest.org/)
 - **Script**:
-  - *3_QSM_modeling_single_tree.xsct2*
+  - [*3_QSM_modeling_single_tree.xsct2*](https://github.com/romina-gonzalez-musso/patagonia-tls-workflow/tree/main/2_scripts)
 - **Script notes**: [See Supplementary
   Information](https://github.com/romina-gonzalez-musso/patagonia-tls-workflow/blob/main/4_supplementary_notes/2_Computree_notes.md)
 
@@ -67,7 +68,7 @@ forest compartments (stems, branches, foliage, and understory).
   [VoxR](https://academic.oup.com/aob/article/121/4/589/4107549) -
   [ITSme](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.14026)
 - **Script**:
-  - *4_Canopy_Crown_voxel.R*
+  - [*4_Canopy_Crown_voxel.R*](https://github.com/romina-gonzalez-musso/patagonia-tls-workflow/blob/main/2_scripts/4_Canopy_Crown_voxel.R)
 
 #### **STEP 5**. Understory voxelization
 
@@ -76,7 +77,7 @@ forest compartments (stems, branches, foliage, and understory).
   [VoxR](https://academic.oup.com/aob/article/121/4/589/4107549) -
   [lidR](https://www.sciencedirect.com/science/article/pii/S0034425720304314)
 - **Script**:
-  - *5_Understory_voxel.R*
+  - [*5_Understory_voxel.R*](https://github.com/romina-gonzalez-musso/patagonia-tls-workflow/blob/main/2_scripts/5_Understory_voxel.R)
 
 ------------------------------------------------------------------------
 

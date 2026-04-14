@@ -8,7 +8,7 @@ output:
 
 This repository provides a complete, reproducible workflow for estimating aboveground biomass (AGB) from terrestrial laser scanning (TLS) data using open-source tools.
 
-The pipeline integrates multiple processing steps—including tree segmentation, leaf–wood classification, quantitative structure modeling (QSM), and voxel-based analysis—to estimate biomass across different forest compartments (stems, branches, foliage, and understory).
+The pipeline integrates multiple processing steps, including tree segmentation, leaf–wood classification, quantitative structure modeling (QSM), and voxel-based analysis, to estimate biomass across different forest compartments (stems, branches, foliage, and understory).
 
 ### **Reference and Citation**
 
@@ -18,19 +18,27 @@ The pipeline integrates multiple processing steps—including tree segmentation,
 
 -   `1_sample_data/`: sample point cloud and a trained CANUPO classifier
 -   `2_scripts/`: scripts to reproduce analysis
--   `3_results/`: example outputs (trees segmented, leaves-wood classification, understory segmented, QSM tree sample)
+-   `3_results/`: example outputs
 -   `4_supplementary_notes/`: additional documentation and script notes
 
 ------------------------------------------------------------------------
 
 ### **Workflow description**
 
+
+```{r, echo=FALSE, out.width="75%", fig.cap="", fig.align="left"}
+
+knitr::include_graphics("_figures/Fig_workflow.png")
+
+```
+
+
 #### **STEP 1**. Point Cloud Segmentation in Computree and SimpleForest
 
 -   **Software:** Computree (v5) + SimpleForest
 -   **Software documentation:** [Computree](https://computree.onf.fr/?page_id=42) - [SimpleForest](https://simpleforest.org/)
 -   **Script**:
-    -   *1_COMPUTREE_SEGMENTATION_PIPELINE.xsct2*
+    -   [*1_COMPUTREE_SEGMENTATION_PIPELINE.xsct2*](https://github.com/romina-gonzalez-musso/patagonia-tls-workflow/tree/main/2_scripts)
 -   **Script notes**: [See Supplementary Information](https://github.com/romina-gonzalez-musso/patagonia-tls-workflow/blob/main/4_supplementary_notes/1_Computree_notes.md)
 
 #### **STEP 2**. Leaves-wood separation
@@ -38,15 +46,15 @@ The pipeline integrates multiple processing steps—including tree segmentation,
 -   **Software:** CANUPO through CloudCompare
 -   **Software documentation:** [CANUPO](https://www.cloudcompare.org/doc/wiki/index.php/CANUPO_(plugin)) - [CloudCompare](https://www.cloudcompare.org/)
 -   **Script**:
-    -   *2_Leaves_wood_sep_CC_CANUPO_R.R*
+    -   [*2_Leaves_wood_sep_CC_CANUPO_R.R*](https://github.com/romina-gonzalez-musso/patagonia-tls-workflow/blob/main/2_scripts/2_Leaves_wood_sep_CC_CANUPO_R.R)
 -   **Script notes**: manual inspection and editing in CloudCompare may be required to address potential classification errors and improve the quality of the resulting point clouds.
 
 #### **STEP 3**. Tree QSM modeling
 
--   **Software:** Computree (v5) and SimpleForest
+-   **Software:** Computree (v5) + SimpleForest
 -   **Software documentation:** [Computree](https://computree.onf.fr/?page_id=42) - [SimpleForest](https://simpleforest.org/)
 -   **Script**:
-    -   *3_QSM_modeling_single_tree.xsct2*
+    -   [*3_QSM_modeling_single_tree.xsct2*](https://github.com/romina-gonzalez-musso/patagonia-tls-workflow/tree/main/2_scripts)
 -   **Script notes**: [See Supplementary Information](https://github.com/romina-gonzalez-musso/patagonia-tls-workflow/blob/main/4_supplementary_notes/2_Computree_notes.md)
 
 #### **STEP 4**. Leaves/Crown voxelization
@@ -54,14 +62,14 @@ The pipeline integrates multiple processing steps—including tree segmentation,
 -   **Software:** VoxR / ITSme
 -   **Software documentation:** [VoxR](https://academic.oup.com/aob/article/121/4/589/4107549) - [ITSme](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.14026)
 -   **Script**:
-    -   *4_Canopy_Crown_voxel.R*
+    -   [*4_Canopy_Crown_voxel.R*](https://github.com/romina-gonzalez-musso/patagonia-tls-workflow/blob/main/2_scripts/4_Canopy_Crown_voxel.R)
 
 #### **STEP 5**. Understory voxelization
 
 -   **Software:** VoxR / lidR
 -   **Software documentation:** [VoxR](https://academic.oup.com/aob/article/121/4/589/4107549) - [lidR](https://www.sciencedirect.com/science/article/pii/S0034425720304314)
 -   **Script**:
-    -   *5_Understory_voxel.R*
+    -   [*5_Understory_voxel.R*](https://github.com/romina-gonzalez-musso/patagonia-tls-workflow/blob/main/2_scripts/5_Understory_voxel.R)
 
 ------------------------------------------------------------------------
 
