@@ -1,60 +1,74 @@
+---
+always_allow_html: true
+output:
+  github_document
+---
+
 ### **Overview**
 
 This repository provides a complete, reproducible workflow for estimating aboveground biomass (AGB) from terrestrial laser scanning (TLS) data using open-source tools.
 
 The pipeline integrates multiple processing steps—including tree segmentation, leaf–wood classification, quantitative structure modeling (QSM), and voxel-based analysis—to estimate biomass across different forest compartments (stems, branches, foliage, and understory).
 
-### **Reference and Citation** 
+### **Reference and Citation**
+
 (paper)
 
 ### **Repository structure**
-- `1_sample_data/`: sample point cloud and a trained CANUPO classifier
-- `2_scripts/`: scripts to reproduce analysis
-- `3_results/`: example outputs (trees segmented, leaves-wood classification, understory segmented, QSM tree sample)
-- `4_supplementary_notes/`: additional documentation and script notes
 
-----------------------------------------
+-   `1_sample_data/`: sample point cloud and a trained CANUPO classifier
+-   `2_scripts/`: scripts to reproduce analysis
+-   `3_results/`: example outputs (trees segmented, leaves-wood classification, understory segmented, QSM tree sample)
+-   `4_supplementary_notes/`: additional documentation and script notes
+
+------------------------------------------------------------------------
 
 ### **Workflow description**
+
 #### **STEP 1**. Point Cloud Segmentation in Computree and SimpleForest
-- **Software:** Computree (v5) + SimpleForest
-- **Software documentation:** [Computree](https://computree.onf.fr/?page_id=42) -  [SimpleForest](https://simpleforest.org/)
-- **Script**: 
-  - *1_COMPUTREE_SEGMENTATION_PIPELINE.xsct2*
-- **Script notes**: [See Supplementary Information](4_supplementary_notes/1_Computree_notes.html)
+
+-   **Software:** Computree (v5) + SimpleForest
+-   **Software documentation:** [Computree](https://computree.onf.fr/?page_id=42) - [SimpleForest](https://simpleforest.org/)
+-   **Script**:
+    -   *1_COMPUTREE_SEGMENTATION_PIPELINE.xsct2*
+-   **Script notes**: [See Supplementary Information](4_supplementary_notes/1_Computree_notes.html)
 
 #### **STEP 2**. Leaves-wood separation
-- **Software:** CANUPO through CloudCompare
-- **Software documentation:** [CANUPO](https://www.cloudcompare.org/doc/wiki/index.php/CANUPO_(plugin)) -  [CloudCompare](https://www.cloudcompare.org/)
-- **Script**: 
-  - *2_Leaves_wood_sep_CC_CANUPO_R.R*
-- **Script notes**: manual inspection and editing in CloudCompare may be required  to address potential classification errors and improve the quality of the resulting point clouds.
+
+-   **Software:** CANUPO through CloudCompare
+-   **Software documentation:** [CANUPO](https://www.cloudcompare.org/doc/wiki/index.php/CANUPO_(plugin)) - [CloudCompare](https://www.cloudcompare.org/)
+-   **Script**:
+    -   *2_Leaves_wood_sep_CC_CANUPO_R.R*
+-   **Script notes**: manual inspection and editing in CloudCompare may be required to address potential classification errors and improve the quality of the resulting point clouds.
 
 #### **STEP 3**. Tree QSM modeling
-- **Software:** Computree (v5) and SimpleForest
-- **Software documentation:** [Computree](https://computree.onf.fr/?page_id=42) -  [SimpleForest](https://simpleforest.org/)
-- **Script**: 
-  - *3_QSM_modeling_single_tree.xsct2* 
-- **Script notes**: [See Supplementary Information](4_supplementary_notes/2_Computree_notes.html)
+
+-   **Software:** Computree (v5) and SimpleForest
+-   **Software documentation:** [Computree](https://computree.onf.fr/?page_id=42) - [SimpleForest](https://simpleforest.org/)
+-   **Script**:
+    -   *3_QSM_modeling_single_tree.xsct2*
+-   **Script notes**: [See Supplementary Information](4_supplementary_notes/2_Computree_notes.html)
 
 #### **STEP 4**. Leaves/Crown voxelization
-- **Software:** VoxR / ITSme
-- **Software documentation:** [VoxR](https://academic.oup.com/aob/article/121/4/589/4107549) - [ITSme](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.14026)
-- **Script**: 
-  - *4_Canopy_Crown_voxel.R* 
 
+-   **Software:** VoxR / ITSme
+-   **Software documentation:** [VoxR](https://academic.oup.com/aob/article/121/4/589/4107549) - [ITSme](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.14026)
+-   **Script**:
+    -   *4_Canopy_Crown_voxel.R*
 
 #### **STEP 5**. Understory voxelization
-- **Software:** VoxR / lidR
-- **Software documentation:** [VoxR](https://academic.oup.com/aob/article/121/4/589/4107549) - [lidR](https://www.sciencedirect.com/science/article/pii/S0034425720304314)
-- **Script**: 
-  - *5_Understory_voxel.R* 
 
-----------------------------------------
+-   **Software:** VoxR / lidR
+-   **Software documentation:** [VoxR](https://academic.oup.com/aob/article/121/4/589/4107549) - [lidR](https://www.sciencedirect.com/science/article/pii/S0034425720304314)
+-   **Script**:
+    -   *5_Understory_voxel.R*
+
+------------------------------------------------------------------------
 
 ### **Notes**
-- The workflow combines multiple open-source tools; some steps require manual parameter tuning depending on forest structure and data quality.
 
-- Recommended parameter settings were calibrated for Nothofagus-dominated Patagonian forests and may require adjustment for other forest types.
+-   The workflow combines multiple open-source tools; some steps require manual parameter tuning depending on forest structure and data quality.
 
-- This repository includes sample data to demonstrate the workflow, but users should adapt parameters to their own datasets.
+-   Recommended parameter settings were calibrated for Nothofagus-dominated Patagonian forests and may require adjustment for other forest types.
+
+-   This repository includes sample data to demonstrate the workflow, but users should adapt parameters to their own datasets.
