@@ -10,16 +10,16 @@ segmentation, leaf–wood classification, quantitative structure modeling
 (QSM), and voxel-based analysis, to estimate biomass across different
 forest compartments (stems, branches, foliage, and understory).
 
-### **Reference and Citation**
-
-(paper)
-
-### **Repository structure**
+#### **Repository structure**
 
 - `1_sample_data/`: sample point cloud and a trained CANUPO classifier
 - `2_scripts/`: scripts to reproduce analysis
 - `3_results/`: example outputs
 - `4_supplementary_notes/`: additional documentation and script notes
+
+#### **Reference and Citation**
+
+(paper)
 
 ------------------------------------------------------------------------
 
@@ -81,15 +81,48 @@ forest compartments (stems, branches, foliage, and understory).
 
 ------------------------------------------------------------------------
 
-### **Notes**
+### **NOTES**
 
-- The workflow combines multiple open-source tools; some steps require
-  manual parameter tuning depending on forest structure and data
+- The workflow combines multiple open-source tools. Some steps may
+  require manual parameter tuning depending on forest structure and data
   quality.
 
-- Recommended parameter settings were calibrated for
-  Nothofagus-dominated Patagonian forests and may require adjustment for
-  other forest types.
+- Recommended parameter settings were calibrated for *Nothofagus*
+  dominated Patagonian forests and may require adjustment for other
+  forest types.
 
 - This repository includes sample data to demonstrate the workflow, but
   users should adapt parameters to their own datasets.
+
+------------------------------------------------------------------------
+
+### **SOFTWARE REFERENCES**
+
+- L. Terryn, K. Calders, M. Åkerblom, H. Bartholomeus, M. Disney, S.
+  Levick, N. Origo, P. Raumonen, H. Verbeeck. Analysing individual 3D
+  tree structure using the R package **ITSMe**. Methods Ecol Evol
+  14 (2023) 231–241. [Link](https://doi.org/10.1111/2041-210X.14026)
+
+- J.-R. Roussel, D. Auty, N.C. Coops, P. Tompalski, T.R.H. Goodbody,
+  A.S. Meador, J.-F. Bourdon, F. De Boissieu, A. Achim. **lidR**: An R
+  package for analysis of Airborne Laser Scanning (ALS) data. Remote
+  Sensing of Environment 251 (2020) 112061.
+  [Link](https://doi.org/10.1016/j.rse.2020.112061)
+
+- J. Hackenberg, H. Spiecker, K. Calders, M. Disney, P. Raumonen.
+  **SimpleTree** —An Efficient Open Source Tool to Build Tree Models
+  from TLS Clouds. Forests 6 (2015) 4245–4294.
+  [Link](https://doi.org/10.3390/f6114245)
+
+- B. Lecigne, S. Delagrange, C. Messier. Exploring trees in three
+  dimensions: **VoxR**, a novel voxel-based R package dedicated to
+  analysing the complex arrangement of tree crowns. Annals of Botany
+  121 (2018) 589–601. [Link](https://doi.org/10.1093/aob/mcx095)
+
+- **CloudCompare** (version 2.13.2). (2025). GPL Software.
+  [Link](http://www.%20cloudcompare.org/)
+
+- N. Brodu, D. Lague. 3D Terrestrial lidar data classification of
+  complex natural scenes using a multi-scale dimensionality criterion:
+  applications in geomorphology (**CANUPO**). (2012)
+  [Link](http://arxiv.org/abs/1107.0550)
