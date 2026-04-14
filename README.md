@@ -35,7 +35,7 @@ forest compartments (stems, branches, foliage, and understory).
 - **Script**:
   - *1_COMPUTREE_SEGMENTATION_PIPELINE.xsct2*
 - **Script notes**: [See Supplementary
-  Information](https://github.com/romina-gonzalez-musso/patagonia-tls-workflow/4_supplementary_notes/1_Computree_notes.md)
+  Information](https://github.com/romina-gonzalez-musso/patagonia-tls-workflow/blob/main/4_supplementary_notes/1_Computree_notes.md)
 
 #### **STEP 2**. Leaves-wood separation
 
@@ -58,7 +58,7 @@ forest compartments (stems, branches, foliage, and understory).
 - **Script**:
   - *3_QSM_modeling_single_tree.xsct2*
 - **Script notes**: [See Supplementary
-  Information](https://github.com/romina-gonzalez-musso/patagonia-tls-workflow/4_supplementary_notes/2_Computree_notes.md)
+  Information](https://github.com/romina-gonzalez-musso/patagonia-tls-workflow/blob/main/4_supplementary_notes/2_Computree_notes.md)
 
 #### **STEP 4**. Leaves/Crown voxelization
 
