@@ -3,12 +3,14 @@
 
 This repository provides a complete, reproducible workflow for
 estimating aboveground biomass (AGB) from terrestrial laser scanning
-(TLS) data using open-source tools.
+(TLS) data using freely available tools.
 
 The pipeline integrates multiple processing steps, including tree
 segmentation, leaf–wood classification, quantitative structure modeling
 (QSM), and voxel-based analysis, to estimate biomass across different
 forest compartments (stems, branches, foliage, and understory).
+
+*Updated: April 2026*
 
 #### **Repository structure**
 
