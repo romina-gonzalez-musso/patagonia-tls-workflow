@@ -21,7 +21,11 @@ forest compartments (stems, branches, foliage, and understory).
 
 #### **Reference and Citation**
 
-(paper)
+Gonzalez Musso R, Stovall A, Gowda J, Rabino A, Kitzberger T. 2026.
+TLS-based aboveground biomass estimation across forest compartments in
+Patagonian forests: a workflow integrating freely available tools. Royal
+Society Open Science. <https://doi.org/10.1098/rsos.261311> (*accepted,
+in press*)
 
 ------------------------------------------------------------------------
 
