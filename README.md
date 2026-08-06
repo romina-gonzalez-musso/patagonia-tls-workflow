@@ -27,6 +27,8 @@ Patagonian forests: a workflow integrating freely available tools. Royal
 Society Open Science. <https://doi.org/10.1098/rsos.261311> (*accepted,
 in press*)
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21829528.svg)](https://doi.org/10.5281/zenodo.21829528)
+
 ------------------------------------------------------------------------
 
 ### **Workflow description**
